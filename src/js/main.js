@@ -1,6 +1,4 @@
-const products =
-[
-
+const products = [
   {
     "id": 1,
     "name": "Мужские кроссовки Nike Air",
@@ -110,3 +108,30 @@ const products =
     "isSale": true
   }
 ]
+//1) ищем контейнер для карточек
+const container = document.querySelector(".products .container")
+//2) очищаем его
+container.innerHTML =""
+
+//3) перебираем все карточки
+products.forEach(card => {
+    container.innerHTML += `
+    <div class="products-card">
+         ${card.isSale ? `
+            <div class="sale">
+              <h4>sale</h4>
+            </div>
+            ` : ""}
+            <div class="hot">
+              <h4>hot</h4>
+            </div>
+            <div class="img-box">
+              <img src="${card.imageUrl}" alt="">
+            </div>
+            <div class="title">
+              <h3>Sweatshirt</h3>
+              <h4>$45.00 - <span class="last-word">$60.00</span></h4>
+            </div>
+          </div>
+    `
+})
