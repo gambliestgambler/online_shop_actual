@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    list-style: none;
+    border: none;
+    outline: none;
+    text-decoration: none;
+}
+// COLORS
+$dark: #202020;
+$light: #fff;
+$main: #FF3D00;
+$second: #0085FF;
+$context: #939393;
+$active: #EF5DA8;
+$placeholder: #808080;
+$stroke: #f7f7f7;
+$green:#76B489;
+$pink:#ffbbf4;
+$orange: #ffb2b2;
+$sun:#f8e290;
+$photo:#e0e0e0;
+$contain:contain;
+$cover:cover;
+
+
+:root {
+    --h1-size: 30px;
+    --h2-size: 20px;
+    --h3-size: 20px;
+    --h4-size: 16px;
+  }

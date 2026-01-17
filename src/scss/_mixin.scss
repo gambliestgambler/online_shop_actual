@@ -1,0 +1,34 @@
+@use "default" as *;
+
+@mixin btn($color, $bgColor){
+    color: $color;
+    border: 1px solid $color;
+    background-color: $bgColor;
+    padding: 20px 30px;
+    border-radius: 5px;
+    
+    font-family: "Montserrat", sans-serif;
+   
+    transition: 300ms;
+    cursor: pointer;
+}
+@mixin font-style($size:16px,$weight:400){
+    font-family: 'Montserrat', sans-serif;
+    font-size: $size;
+    font-weight: $weight;
+}
+@mixin cover($height,$with:100%,$vid){
+    position: relative;
+    padding-top: $height;
+    width: $with;
+    img{
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: $vid;
+        transition: 400ms;
+    }
+}

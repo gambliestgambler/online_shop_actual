@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body id="cart-page">
+    <header>
+      <div class="container">
+        <div class="logo">
+          <h2>super shop</h2>
+          <div class="circle"></div>
+        </div>
+        <div class="nav-menu">
+          <nav>
+            <a href="../../index.html">Main</a>
+            <a href="./product.html">Product</a>
+            <a href="./cart.html">Cart</a>
+            <a href="./order.html">Order</a>
+          </nav>
+          <div class="nav-icons">
+            <div class="cart">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 -960 960 960"
+                width="24px"
+                fill="#e8eaed"
+              >
+                <path
+                  d="m480-560-56-56 63-64H320v-80h167l-64-64 57-56 160 160-160 160ZM280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM40-800v-80h131l170 360h280l156-280h91L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68.5-39t-1.5-79l54-98-144-304H40Z"
+                />
+              </svg>
+            </div>
+            <div class="search">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 -960 960 960"
+                width="24px"
+                fill="#e8eaed"
+              >
+                <path
+                  d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="page-title">
+        <h2>Cart</h2>
+        <nav>
+          <a href="#">Home</a>
+          <a href="#">Cart</a>
+        </nav>
+      </section>
+
+      <section class="cart-table-container">
+        <div class="container">
+          <div class="table">
+            <div class="table-header row">
+              <div class="col">
+                <p>Product</p>
+              </div>
+              <div class="col">
+                <p>Price</p>
+              </div>
+              <div class="col">
+                <p>Quantity</p>
+              </div>
+              <div class="col">
+                <p>Total</p>
+              </div>
+              <div class="col"></div>
+            </div>
+            <div class="table-content">
+              <div class="row">
+                <div class="col">
+                  <div class="image cover">
+                    <img src="../img/cyberpunk.png" alt="">
+                  </div>
+                  <div class="text">
+                    <p class="name">Product Name</p>
+                    <div class="settings row">
+                      <div class="circle"></div>
+                      <p class="size">M</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <p class="price">$45.00</p>
+                </div>
+                <div class="col">
+                  <div class="counter">
+                    <input type="button" value="-" class="btn-minus">
+                    <input type="number" value="1" class="count">
+                    <input type="button" value="+" class="btn-plus">
+                  </div>
+                </div>
+                <div class="col">
+                  <p class="total">$45.00</p>
+                </div>
+                <div class="col">
+                  <h4>X</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="check">
+            <h3>Cart total</h3>
+            <div class="check-item">
+              <h4>Subtotal:</h4>
+              <p class="subtotal">$165.00</p>
+            </div>
+            <div class="check-item">
+              <h4>Shipping:</h4>
+              <select name="" id="">
+                <option value="">Select shipping</option>
+                <option value="">Free shipping</option>
+                <option value="">Courier $20.50</option>
+              </select>
+            </div>
+            <div class="check-item total-cost">
+              <h4>Total:</h4>
+              <p>$165.00</p>
+            </div>            
+          </div>
+        </div>
+      </section>
+
+      <div class="products" id="cart">
+        <div class="container">
+          <div class="products-card">
+            <div class="img-box">
+              <img src="../img/sharf2.png" alt="" />
+            </div>
+            <div class="title">
+              <h3>Scarf</h3>
+              <h4 id="conext">$45.00</h4>
+            </div>
+          </div>
+          <div class="products-card">
+            <div class="hot">
+              <h4>hot</h4>
+            </div>
+            <div class="img-box">
+              <img src="../img/mayka2.png" alt="" />
+            </div>
+            <div class="title">
+              <h3>T-Shirt</h3>
+              <h4>$30.00</h4>
+            </div>
+          </div>
+          <div class="products-card">
+            <div class="hot">
+              <h4>hot</h4>
+            </div>
+            <div class="img-box">
+              <img src="../img/classes.png" alt="" />
+            </div>
+            <div class="title">
+              <h3>Sunglasses</h3>
+              <h4>$32.00</h4>
+            </div>
+          </div>
+        </div>
+        <input type="button" class="btn" value="view all products" />
+      </div>
+      <div class="Newsletter" id="other">
+        <div class="topy-title">
+          <h1>Newsletter</h1>
+          <h4>Get timely updates from your favorite products.</h4>
+        </div>
+        <div class="input">
+          <input
+            type="email"
+            class="email-input"
+            placeholder="Enter your email here"
+          />
+          <div class="svg-mail">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+            >
+              <path
+                d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z"
+              />
+            </svg>
+          </div>
+          <div class="red-plane">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+            >
+              <path
+                d="M120-160v-640l760 320-760 320Zm80-120 474-200-474-200v140l240 60-240 60v140Zm0 0v-400 400Z"
+              />
+            </svg>
+          </div>
+        </div>
+        <div class="cont">
+          <div class="card">
+            <div class="cover">
+              <img src="../img/nigga.jpg" alt="" />
+            </div>
+          </div>
+          <div class="card">
+            <div class="cover">
+              <img src="../img/oen.jpg" alt="" />
+            </div>
+          </div>
+          <div class="card">
+            <div class="cover">
+              <img src="../img/blue.jpg" alt="" />
+            </div>
+          </div>
+          <div class="card">
+            <div class="cover">
+              <img src="../img/flower.jpg" alt="" />
+            </div>
+          </div>
+          <div class="card">
+            <div class="cover">
+              <img src="../img/telka.jpg" alt="" />
+            </div>
+          </div>
+          <div class="card">
+            <div class="cover">
+              <img src="../img/antisocial.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+
+        <div class="title-down container">
+          <div class="left">
+            <h2>super shop</h2>
+            <h4>
+              Lorem ipsum dolor sit amet, consecte apiscing elit, sed do eiusmod
+              tempor incididunt labore et dolore magna aliqua. pelle id nibh
+              tourna nunc id cursus aliquam eleifend. Varius vel pharetra vel
+              turpis nunc eget.
+            </h4>
+            <div class="logo-box">
+              <a href="https://www.facebook.com/?locale=ru_RU">
+                <img src="../img/facebook.png" alt="" />
+              </a>
+              <a href="https://www.google.kz/?hl=ru">
+                <img src="../img/google.png" alt="" />
+              </a>
+              <a href="https://x.com/?lang=ru">
+                <img src="../img/twitter.png" alt="" />
+              </a>
+              <a href="https://2gis.kz/pavlodar">
+                <img src="../img/logo-2gis.png" alt="" />
+              </a>
+            </div>
+          </div>
+          <div class="midl">
+            <h2>Userul Links</h2>
+            <div class="down">
+              <div class="nav">
+                <a href="#">Home</a>
+                <a href="#">Man Fashion</a>
+                <a href="#">Woman Fashion</a>
+                <a href="#">Accessories</a>
+                <a href="#">Collections</a>
+              </div>
+              <div class="nav">
+                <a href="#">Cart</a>
+                <a href="#">Checkout</a>
+                <a href="#">My Account</a>
+                <a href="#">Order Tracking</a>
+                <a href="#">Privasi Policy</a>
+              </div>
+            </div>
+          </div>
+          <div class="right">
+            <h2>Contact Us</h2>
+            <div class="title">
+              <div class="nav-box">
+                <div class="svg-box">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="40px"
+                    viewBox="0 -960 960 960"
+                    width="40px"
+                    ]
+                  >
+                    <path
+                      d="M480.06-486.67q30.27 0 51.77-21.56 21.5-21.55 21.5-51.83 0-30.27-21.56-51.77-21.55-21.5-51.83-21.5-30.27 0-51.77 21.56-21.5 21.55-21.5 51.83 0 30.27 21.56 51.77 21.55 21.5 51.83 21.5ZM480-168q129.33-118 191.33-214.17 62-96.16 62-169.83 0-114.86-73.36-188.1-73.36-73.23-179.97-73.23T300.03-740.1q-73.36 73.24-73.36 188.1 0 73.67 63 169.83Q352.67-286 480-168Zm0 88Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z"
+                    />
+                  </svg>
+                </div>
+                <h4>
+                  Кронверкский проспект; 4 этаж Кронверкское, Петроградский
+                  район, Санкт-Петербург, 197101
+                </h4>
+              </div>
+              <div class="nav-box">
+                <div class="svg-box">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="24px"
+                    viewBox="0 -960 960 960"
+                    width="24px"
+                  >
+                    <path
+                      d="M798-120q-125 0-247-54.5T329-329Q229-429 174.5-551T120-798q0-18 12-30t30-12h162q14 0 25 9.5t13 22.5l26 140q2 16-1 27t-11 19l-97 98q20 37 47.5 71.5T387-386q31 31 65 57.5t72 48.5l94-94q9-9 23.5-13.5T670-390l138 28q14 4 23 14.5t9 23.5v162q0 18-12 30t-30 12ZM241-600l66-66-17-94h-89q5 41 14 81t26 79Zm358 358q39 17 79.5 27t81.5 13v-88l-94-19-67 67ZM241-600Zm358 358Z"
+                    />
+                  </svg>
+                </div>
+                <h4>8-(776)-074-28-21</h4>
+              </div>
+              <div class="nav-box">
+                <div class="svg-box">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="24px"
+                    viewBox="0 -960 960 960"
+                    width="24px"
+                  >
+                    <path
+                      d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z"
+                    />
+                  </svg>
+                </div>
+                <h4>336500@edu.itmo.ru</h4>
+              </div>
+            </div>
+            <div class="pay-box">
+              <a href="#">
+                <img src="../img/mastercard-logo.png" alt="" />
+              </a>
+              <a href="#">
+                <img src="../img/paypall.png" alt="" />
+              </a>
+              <a href="#">
+                <img src="../img/amer.png" alt="" />
+              </a>
+              <a href="#">
+                <img src="../img/visa.png" alt="" />
+              </a>
+              <a href="#">
+                <img src="../img/dicsover.png" alt="" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

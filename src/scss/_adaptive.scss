@@ -1,0 +1,65 @@
+@media screen and (max-width: 1240px) {
+    header .container{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+   
+}
+@media screen and (max-width: 1000px) {
+  html main .bye-biker-hoodie .container .down-up-inf{
+    padding: 15px;
+    .upy{
+      box-sizing: border-box;
+      margin-left:2%;
+      margin-right: 2%;
+      min-width: 0;
+      width: 100%;
+    }
+    h4{
+    width: 100%;
+    min-width: 0;
+    }
+  }
+   
+}
+@media screen and (max-width: 700px) {
+  html main .bye-biker-hoodie .container{
+    padding:0 10px;
+  }
+   
+    main .products .btn{
+      font-size: 12px;
+      font-weight: 400;
+    }
+    :root {
+        --font-reduction: 2px; /* Величина уменьшения */
+      }
+      
+  
+     html body main {
+        
+        h1{
+        font-size: calc(var(--h1-size) - var(--font-reduction));
+      }
+    
+      h2 {
+        font-size: calc(var(--h2-size) - var(--font-reduction));
+      }
+    
+      h3 {
+        font-size: calc(var(--h3-size) - var(--font-reduction));
+      }
+    
+      h4 {
+        font-size: calc(var(--h4-size) - var(--font-reduction));
+      }
+      html body main .categories .container .category-card .cover h2 {
+        font-size: calc(var(--h1-size) - var(--font-reduction));
+      }
+    }
+}
+@media screen and (max-width: 470px) {
+    main .main-banner .container h1{
+        font-size: 24px;
+    }
+}
