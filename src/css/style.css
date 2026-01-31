@@ -234,8 +234,6 @@ header .nav-menu .nav-icons svg {
   position: relative;
   padding-top: 48%;
   width: 48%;
-  mix-blend-mode: multiply;
-  transform: scalex(-1);
 }
 .main-banner .cover img {
   z-index: 1;
@@ -246,6 +244,10 @@ header .nav-menu .nav-icons svg {
   height: 100%;
   object-fit: cover;
   transition: 400ms;
+}
+.main-banner .cover {
+  mix-blend-mode: multiply;
+  transform: scalex(-1);
 }
 .main-banner h1 {
   width: 48%;
@@ -378,23 +380,34 @@ header .nav-menu .nav-icons svg {
   align-items: center;
   gap: 40px;
 }
-.products .title .down {
-  margin: 0 40px 0 40px;
+.products .title .filter {
   display: flex;
-  height: 30px;
   justify-content: center;
   align-items: center;
   gap: 40px;
-  margin-bottom: 10px;
 }
-.products .title .down h3 {
+.products .title .filter button {
   transition: 0.3s;
   cursor: pointer;
+  font-size: 18px;
+  font-weight: 700;
+  border-bottom: 2px solid transparent;
 }
-.products .title .down h3:hover {
+.products .title .filter button:hover, .products .title .filter button.selected {
   cursor: pointer;
   border-bottom: 2px solid #FF3D00;
   color: #FF3D00;
+}
+.products .title .settings {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.products .title .settings select {
+  border: 1px solid #b4b4b4;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 700;
 }
 .products .container {
   width: 100%;
@@ -770,7 +783,6 @@ header .nav-menu .nav-icons svg {
   position: relative;
   padding-top: 100%;
   width: 100%;
-  margin-bottom: 2%;
 }
 .product .product-details .images .block.cover img {
   z-index: 1;
@@ -781,6 +793,9 @@ header .nav-menu .nav-icons svg {
   height: 100%;
   object-fit: cover;
   transition: 400ms;
+}
+.product .product-details .images .block.cover {
+  margin-bottom: 2%;
 }
 .product .product-details .text {
   display: flex;

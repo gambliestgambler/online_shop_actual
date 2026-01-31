@@ -221,24 +221,35 @@ header {
     flex-direction: column;
     align-items: center;
     gap: 40px;
-    .down {
-      margin: 0 40px 0 40px;
+    .filter {
       display: flex;
-      height: 30px;
       justify-content: center;
       align-items: center;
       gap: 40px;
-      margin-bottom: 10px;
-      h3 {
+      button {
         transition: 0.3s;
         cursor: pointer;
-        &:hover {
+        font-size: 18px;
+        font-weight: 700;
+        border-bottom: 2px solid transparent;
+        &:hover, &.selected {
           cursor: pointer;
           border-bottom: 2px solid $main;
           color: $main;
         }
       }
       h2 {
+      }
+    }
+    .settings{
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      select{
+        border: 1px solid #b4b4b4;
+        padding: 8px 16px;
+        border-radius: 8px;
+        font-weight: 700;
       }
     }
   }

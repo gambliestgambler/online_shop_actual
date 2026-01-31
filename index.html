@@ -112,12 +112,21 @@
       <div class="products" id="cart">
         <div class="title">
           <h1>Our Products</h1>
-          <div class="down">
-            <h3>All</h3>
-            <h3>Boys Fashion</h3>
-            <h3>Girls Fashion</h3>
-            <h3>Accessories</h3>
+          <div class="settings">
+            <div class="filter">
+              <button type="button" class="selected" onclick="filterCards('all')">All</button>
+              <button type="button" onclick="filterCards('hot')">Hot only</button>
+              <button type="button" onclick="filterCards('sale')">Sale only</button>
+            </div>
+            <select name="sort" id="sort" title="сортировка">
+              <option value="default">По умолчанию</option>
+              <option value="name-a">По названию от А до Я</option>
+              <option value="name-z">По названию от Я до А</option>
+              <option value="price-up">По возрастанию цены</option>
+              <option value="price-down">По убыванию цены</option>
+            </select>
           </div>
+          
         </div>
         <div class="container">
           <div class="products-card">
