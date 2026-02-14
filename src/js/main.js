@@ -159,10 +159,14 @@ function setCards(array) {
   });
 }
 // вызов функции
-setCards();
+setCards(products);
 
 
-function filterCards(filterType){
+function filterCards(filterType, btn){
+  const buttons = document.querySelectorAll(".filter button");
+  buttons.forEach(item => item.classList.remove("selected"))
+  btn.classList.add("selected")
+
   let tempCards = [];
   if(filterType == "sale"){
     // возращаем все товары со скидкой 
@@ -178,4 +182,24 @@ function filterCards(filterType){
 
   //переразмещаем карточки
   setCards(tempCards)
+}
+
+function sortCards(select){
+  const sortType = select.value;
+
+  let tempCards = [...products];
+  if(sortType == "price-up"){
+    tempCards.sort((a, b) => a.finalPrice - b.finalPrice);
+  }
+  else if(sortType == "price-down"){
+    tempCards.sort((a, b) => b.finalPrice - a.finalPrice);
+  }
+  else if(sortType == "name-a"){
+    tempCards.sort((a, b) => a.name.localeCompare(b.name));
+  }
+  else if(sortType == "name-z"){
+    tempCards.sort((a, b) => b.name.localeCompare(a.name));
+  }
+  
+  setCards(tempCards);
 }
