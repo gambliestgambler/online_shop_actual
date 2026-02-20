@@ -203,3 +203,36 @@ function sortCards(select){
   
   setCards(tempCards);
 }
+
+// Функция для инициализации кликов по кружкам цветов
+function initColorCircles() {
+  // Находим все кружки для выбора цвета в секции цветов
+  const colorCircles = document.querySelectorAll('.product .product-details .text .settings .color .circle');
+  
+  colorCircles.forEach((circle, index) => {
+    circle.addEventListener('click', function() {
+      // Удаляем класс active со всех кружков этой группы
+      colorCircles.forEach(c => c.classList.remove('active'));
+      
+      // Добавляем класс active к нажатому кружку
+      this.classList.add('active');
+      
+      // Получаем цвет кружка
+      const computedStyle = window.getComputedStyle(this);
+      const backgroundColor = computedStyle.backgroundColor;
+      
+      // Определяем название цвета по индексу
+      const colorNames = ['Серый', 'Оранжевый', 'Зелёный', 'Синий'];
+      const colorName = colorNames[index] || 'Неизвестный цвет';
+      
+      // Выводим информацию в консоль
+      console.log(`Выбран цвет: ${colorName} (${backgroundColor})`);
+      
+      // Показываем сообщение пользователю
+      alert(`Вы выбрали цвет: ${colorName}`);
+    });
+  });
+}
+
+// Вызываем функцию когда страница загружена
+document.addEventListener('DOMContentLoaded', initColorCircles);
